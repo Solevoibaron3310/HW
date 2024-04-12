@@ -1,0 +1,445 @@
+body {
+    width: 1400px;
+}
+
+header {
+   margin-left: 52px;
+   margin-top: 40px;
+   width: 1296px;
+   height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 145px;
+}
+
+.logo {
+    margin-left: 52px;
+    width: 171px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.plan {
+    font-family: Cabin;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    margin-left: 18px;
+}
+
+ul {
+    width: 410px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.list-1 {
+    font-family: Cabin;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.list-1-spec {
+    font-family: Cabin;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(66, 93, 248, 1);
+    text-decoration: none;
+}
+
+.autorization {
+    width: 250px;
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.in {
+    width: 110px;
+    height: 49px;
+    background-color: white;
+    border: 1px solid #DADADA;;
+    border-radius: 10%;
+    transition: background-color 0.3s;
+}
+
+.in:active {
+    background-color: #DADADA;
+}
+
+.up {
+    width: 110px;
+    height: 49px;
+    background-color: rgba(66, 93, 248, 1);
+    border: 1px solid rgba(66, 93, 248, 1);
+    border-radius: 10%;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.up:active {
+    background-color: white;
+    color: rgba(66, 93, 248, 1);
+    border: 1px solid rgba(66, 93, 248, 1);
+}
+
+main {
+    width: 1296px;
+    height: 1047px;
+    margin-right: 52px;
+    text-align: center;
+}
+
+h1 {
+    color: #0E0F13;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+h2 {
+    color: #0E0F13;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.days14 {
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 22px;
+    margin-bottom: 60px;
+    color: rgba(127, 130, 138, 1);
+}
+
+.txt-1 {
+    color: #7F828A;
+    text-align: center;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+
+.cards {
+    width: 1296px;
+    height: 817px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 52px;
+    margin-right: 52px;
+    align-items: flex-end;
+}
+
+
+.Starter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 416px;
+    height: 789px;
+    margin-right: 12px;
+}
+
+.top-prt {
+    width: 304px;
+    height: 300px;
+    align-items: center ;
+}
+
+.cost {
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+    width: 304px;
+    height: 80px;
+    margin-left: 80px;
+}
+
+.cost25 {
+    color: #0E0F15;
+    text-align: right;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -2.56px;
+    margin-right: 8px;
+}
+
+.cost45 {
+    text-align: right;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -2.56px;
+    margin-right: 8px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.slash {
+    color: #7F828A;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.slash-2 {
+    color: white;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.Enterprice {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 416px;
+    height: 789px;
+    margin-left: 12px;
+}
+
+h3 {
+    color: white;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+h4 {
+    color: #0E0F13;
+    font-family: Cabin;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 22px;
+    margin-top: 56px;
+}
+
+.txt-2 {
+    color: white;
+    text-align: center;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.txt-3 {
+    color: #7F828A;
+    text-align: center;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.Contact {
+    width: 156px;
+    height: 49px;
+    color: #F6FDFF;
+    font-family: Cabin;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    background-color: #425DF8;
+    border: 1px solid #425DF8;
+    border-radius: 8px;
+    margin-top: 125px;
+}
+
+.Contact:active {
+    background-color: white;
+    color: rgba(66, 93, 248, 1);
+    border: 1px solid rgba(66, 93, 248, 1);
+}
+
+.email {
+    width: 156px;
+    height: 49px;
+    color: #F6FDFF;
+    font-family: Cabin;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.email:active {
+    color: rgba(66, 93, 248, 1);
+}
+
+.get-started {
+    color: #F6FDFF;
+    font-family: Cabin;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #0E0F13;;
+}
+
+.logo2 {
+    height: 24px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-img {
+    width: 24px;
+    height: 24px;
+}
+
+.plan2 {
+    color: #7F828A;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 52px;
+}
+
+.reserved {
+    color: #7F828A;
+    text-align: right;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 52px;
+}
+
+
+ol {
+    width: 310px;
+    height: 252px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.vector {
+    margin-right: 16px;
+}
+
+.get-started {
+    height: 16px;
+}
+
+.lft-rght-lists {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 310px;
+    color: #7F828A;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.middle-list {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 310px;
+    color: white;
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.Pro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #161A34;
+    border-radius: 8px;
+    width: 416px;
+    height: 817px;
+    margin-left: 12px;
+    background-color: #161A34;
+}
