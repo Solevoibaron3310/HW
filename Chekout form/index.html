@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+     <header>
+        <div class="blue-prt">
+            <img class="logo" src="imgs/logo.png" alt="logo">
+            <img class="basket" src="imgs/Cart.png" alt="basket">
+        </div>
+        <div class="white-prt">
+            <span class="menu">Menu</span>
+            <ul>
+                <li>About</li>
+                <li>Types of Sushi</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <p class="p-1">Placing an order</p>
+        <form class="contact-order" action="">
+                <div class="details">
+                    <div class="contact">
+                    <h1>Your contact details</h1>
+                    <span class="value">First name</span>
+                    <input class="first-prt-input" type="text" placeholder="Your First Name">
+                    <span class="value">Last name</span>
+                    <input class="first-prt-input" type="text" placeholder="Your Last Name">
+                    <span class="value">Email Address</span>
+                    <input class="first-prt-input" type="text" placeholder="Your Email Address">
+                </div>
+                <div class="delivery-adress">
+                    <h2>Delivery Аddress</h2>
+                    <input class="secnd-prt-input" type="text" placeholder="Your Delivery Аddress">
+                    <span class="value">Choose a convenient delivery day for you:</span> <input type="date">
+                </div>
+                <div class="comment-order">
+                    <h3>Comment on the order</h3>
+                    <input class="secnd-prt-input" type="text" placeholder="Your Comment">
+                </div>
+
+                <div class="confirm-order">
+                    <h4>Will you call to confirm the order?</h4>
+                    <span class="help">We can call if you are ordering for the first time</span>
+
+                    <div class="yes"><input type="radio" name="option" value="Option2"><label for="radio">Yes, call me</label>
+                    </div>
+                    <div class="no">
+                    <input type="radio" name="option" value="Option1"><label for="radio">No, don't call me</label>
+                </div>
+                </div>
+
+                <div class="payment-method">
+                    <h5>Payment method</h5>
+                    <div class="by-card">
+                        <input type="radio" name="payment" value="money1"><label for="radio">By card Visa, Mastercard or Privat24 by LiqPay</label>
+                    </div>
+
+                    <div class="terminal">
+                        <input type="radio" name="payment" value="money2"><label for="radio">Terminal (payment by card upon receipt)</label>
+                    </div>
+
+                    <div class="cash">
+                        <input type="radio" name="payment" value="money3"><label for="radio">Cash on delivery</label>
+                    </div>
+
+                </div>
+
+
+
+
+
+               
+
+
+        <div class="order">
+                <p class="p-2">Your order</p>
+                <div class="Sushi">
+                    <img src="imgs/image-div.png" alt="">
+                    <div class="sushi-info">
+                        <span class="name">Premium Sashimi Variety Pack</span>
+                        <span class="portion">(2) 8 Oz. Portions</span>
+                    </div>
+                    <span class="price">42.95 $</span>
+                </div>
+                <div class="total-price">
+                    <span class="total">Total</span>
+                    <span class="price">42.95 $</span>
+                </div>
+                <form class="second-form" action="">
+                    <div class="checkbox-2">
+                    <input type="checkbox">  
+                    <label class="agreement" for="checkbox">I agree to the processing of personal data</label>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Submit">
+                </div>
+                </form>
+            </div> 
+       
+    </form>
+    </main>
+    <footer>
+        <span class="year">© 2023</span>
+        <span class="reserved">All rights reserved</span>
+    </footer>
+</body>
+</html>
