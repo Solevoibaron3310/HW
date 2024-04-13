@@ -81,6 +81,7 @@ main {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    margin-left: 163px;
 }
 
 
@@ -145,6 +146,13 @@ main {
     font-weight: 400;
     margin-top: 3px;
     margin-bottom: 8px;
+}
+
+.number {
+    width: 53px;
+    height: 32px;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
 }
 
 .price {
@@ -403,4 +411,39 @@ footer {
     margin-right: 52px;
     height: 24px;
     margin-bottom: 32px;
+}
+
+.buttons {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    height: 40px;
+}
+
+.submit {
+    width: 215px;
+    height: 40px;
+    background-color: #3D76BA;
+    border-radius: 4px;
+    color: white;
+    font-family: Cabin;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    border: 0px solid;
+}
+
+.reset {
+    width: 215px;
+    height: 40px;
+    background: #DEDEDE;
+    border-radius: 4px;
+    color: rgba(31, 31, 31, 1);
+    font-family: Cabin;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    border: 0px solid;
+    margin-left: 16px;
 }
