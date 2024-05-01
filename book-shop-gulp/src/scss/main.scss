@@ -1,0 +1,300 @@
+header {
+    width: 1400px;
+    height: 110px;
+    .header__blue-prt {
+        width: 100%;
+        height: 72px;
+        background-color: rgba(16, 187, 213, 1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 52px;
+        .blue-prt__logo {
+            width: 136px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .logo__heading {
+            color: #F8FDFE;
+            font-family: Cabin;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        .basket {
+            text-decoration: none;
+            width: 99px;
+        }
+    }
+    .header__bottom-prt {
+        width: 100%;
+        height: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .bottom-prt__category {
+            color: #000;
+            font-family: Cabin;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            width: 300px;
+            li {
+                color: #000;
+                font-family: Cabin;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+            
+            }
+        }
+    }
+}
+
+main {
+    background-color: var(--beige, #EEEEEF);
+    width: 100%;
+    height: 1750px;
+    position: relative;
+    padding-left: 52px;
+    padding-top: 32px;
+    .Bestsellers {
+        color: #1F1F1F;
+        font-family: Cabin;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        border-bottom: 1px solid gray;
+        width: 1296px;
+        padding-bottom: 23px;
+        margin: 0;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 306px);
+        grid-template-rows: repeat(3, 512px);
+        grid-gap: 32px;
+        margin-top: 48px;;
+        .book-card {
+            width: 306px;
+            height: 512px;
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            .top-of-card {
+                width: 242px;
+                height: 280px;
+                display: flex;
+                justify-content: center;
+                margin-top: 32px;
+                .hit {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 32px;
+                    color: #F8FDFE;
+                    text-align: center;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    background-color: #4200FF;
+                    border-radius: 4px;
+                    position: absolute;
+                    left: 32px;
+                    top: 32px ;
+                }
+                
+                .new {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 47px;
+                    height: 32px;
+                    background-color: rgba(175, 57, 231, 1);
+                    color: #F8FDFE;
+                    border-radius: 4px;
+                    text-align: center;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    position: absolute;
+                    left: 32px;
+                    top: 32px ;
+                }
+                
+                .sale {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    height: 32px;
+                    background-color: rgba(234, 51, 192, 1);
+                    color: #F8FDFE;
+                    border-radius: 4px;
+                    text-align: center;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    position: absolute;
+                    top: 32px ;
+                    left: 70px;
+                }
+            }
+            .bottom-of-card {
+                height: 152px;
+                width: 242px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: center;
+                margin-right: 32px;
+                margin-left: 32px;
+                .info {
+                    height: 152px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+                .name-of-book {
+                    overflow: hidden;
+                    color: var(--black, #1F1F1F);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-family: Cabin;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    margin-top: 16px;
+                    margin-bottom: 0;
+                    border-bottom: 1px solid gray;
+                    text-align: start;
+                }
+                    
+                .author {
+                    overflow: hidden;
+                    color: var(--gray, #8E8E8E);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    margin-bottom: 8px;
+                    text-align: start;
+                }
+                .prices {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .price {
+                        color: #E90000;
+                        font-family: Cabin;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        text-align: start;
+                        width: 80px;
+                    }
+                    .last-price {
+                        color: var(--gray, #8E8E8E);
+                        font-family: Cabin;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        width: 85px;
+                    }
+                }
+                .Add {
+                    margin-top: 16px;
+                    width: 242px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--white, #F8FDFE);
+                    text-align: center;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    background-color: rgba(76, 57, 78, 1);
+                    border-radius: 4px;
+                    border: none;
+
+                }
+                .add:active {
+                    background-color: rgba(116, 73, 120, 1);
+                }
+                .End {
+                    margin-top: 16px;
+                    width: 242px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--white, #F8FDFE);
+                    text-align: center;
+                    font-family: Cabin;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    border-radius: 4px;
+                    background: #4D762D;
+                    border: none;
+                }
+                .End:active {
+                    background: #6DB236;
+                }
+            }
+        }
+    }
+    .chat {
+        width: 64px;
+        height: 64px;
+        position: fixed;
+        top: 520px;
+        left: 1338px;
+        border: none;
+        background: none;
+    }
+}
+
+footer {
+    width: 1400px;
+    height: 88px;
+    background-color: rgba(76, 57, 78, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .footer__bot-txt {
+        color: var(--white, #F8FDFE);
+        font-family: Cabin;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        margin-right: 52px;
+        margin-left: 52px;
+    }
+}
