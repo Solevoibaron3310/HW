@@ -1,0 +1,40 @@
+@mixin flex-columns {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin main-heading {
+    font-family: Product Sans;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72.78px;
+    color: #32333D;
+}
+
+@mixin main-p {
+    font-family: Product Sans;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.11px;
+    color: #5B6574;
+}
+
+@mixin flex-heading {
+    font-family: Product Sans;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.67px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+@mixin flex-p {
+    font-family: Product Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    color: #5B6574;
+    margin-top: 10px;
+}
