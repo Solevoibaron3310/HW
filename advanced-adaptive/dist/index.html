@@ -1,143 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="top-navbar">
-      <img class="top-navbar__logo-img" src="image/Hope.png" alt="">
-        <ul class="top-navbar__top-list">
-          <li class="top-list__button">
-            <img class="button__image" src="image/fi-rr-magic-wand.png" alt="">
+  </head>
+  <body>
+     <header class="navbar">
+      <div class="navbar__wrapper">
+        <a class="navbar__logo-link" href="">
+          <img class="navbar__logo" src="image/Hope.png" alt="" />
+        </a>
+
+        <ul class="navbar__list">
+          <li class="navabar__item">
+            <a href="">
+              <img
+                class="navbar__image"
+                src="image/fi-rr-magic-wand.png"
+                alt=""
+              />
+            </a>
             <a class="button__label" href="">Portfolio</a>
           </li>
-          <li class="top-list__button">
-            <img class="button__image" src="image/fi-rr-document.png" alt="">
+          <li class="navabar__item">
+            <a href="">
+              <img
+                class="button__image"
+                src="image/fi-rr-document.png"
+                alt=""
+              />
+            </a>
             <a class="button__label" href="">Resume</a>
           </li>
-          <li class="top-list__button">
-            <img class="button__image" src="image/fi-rr-flower-tulip.png" alt="">
+          <li class="navabar__item">
+            <a href="">
+              <img
+                class="button__image"
+                src="image/fi-rr-flower-tulip.png"
+                alt=""
+              />
+            </a>
             <a class="button__label" href="">Testimonials</a>
           </li>
-          <li class="top-list__button">
-            <img class="button__image" src="image/fi-rr-comment-heart.png" alt="">
+          <li class="navabar__item">
+            <a href="">
+              <img
+                class="button__image"
+                src="image/fi-rr-comment-heart.png"
+                alt=""
+              />
+            </a>
             <a class="button__label" href="">Contact</a>
           </li>
         </ul>
-        <img class="burger-menu" src="image/header menu item.png" alt="">
-    </div>
-    <h1>Unleash Creativity Through Minimalism.</h1>
-  </header>
+        <img
+          class="navbar__burger-menu"
+          src="image/header menu item.png"
+          alt=""
+        />
+      </div>
+    </header>
 
-<main>
-     <section class="first-section">
-      <div class="first-section__alex-columns">
-          <h2>Meet Alex Johnsson</h2>
-          <span class="alex-columns__span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</span>
+    <main>
+     <section class="hero">
+      <h1 class="hero__title">Unleash Creativity Through Minimalism.</h1>
+    </section> 
+
+   
       
-            <div class="alex-columns__columns">
-              <div class="columns__column">
-                <h3>39</h3>
-                <span class="column__span">Happy Clients</span>
-              </div>
-              <div class="columns__column">
-                <h3>50</h3>
-                <span class="column__span">Sleek Projects</span>
-              </div>
-              <div class="columns__column">
-                <h3>24</h3>
-                <span class="column__span">App Designs</span>
-              </div>
+       <section class="statistic">
+        <div class="statistic__wrapper">
+          <h2 class="statistic__title">Meet Alex Johnsson</h2>
+          <p class="statistic__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna.
+          </p>
+
+          <div class="statistic__metric-wrapper">
+            <div class="statistic__metric-column">
+              <h3 class="statistic__metric">39</h3>
+              <span class="statistic__metric-label">Happy Clients</span>
             </div>
-        </div>
-        <img class="alex-columns__image-absolute" src="image/Group 3.png" alt="">
-    </section>
-
-    <section class="grid-cards">
-      <div class="grid-cards__container">
-        <a class="container__top-card" href="">
-          <div class="top-card__images">
+            <div class="statistic__metric-column">
+              <h3 class="statistic__metric">50</h3>
+              <span class="statistic__metric-label">Sleek Projects</span>
+            </div>
+            <div class="statistic__metric-column">
+              <h3 class="statistic__metric">24</h3>
+              <span class="statistic__metric-label">App Designs</span>
+            </div>
           </div>
-          <span class="top-card__heading">Project: Banking Mobile App</span>
-          <span class="top-card__label">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</span>
-        </a>
-
-        <a class="container__bottom-card-1" href="" >
-          <div class="bottom-cards__image">
-          </div>
-          <span class="bottom-card-1__heading">Banking Mobile App</span>
-          <p class="bottom-card-1__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        </a>
-
-        <a class="container__bottom-card-2" href="" >
-          <div class="bottom-cards__image">
-          </div>
-          <span class="bottom-card-2__heading">Save Planet Mobile app</span>
-          <p class="bottom-card-2__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        </a>
-
-        <a href="" class="container__bottom-card-3">
-          <div class="bottom-cards__image">
-          </div>
-          <span class="bottom-card-3__heading">Banking Mobile App</span>
-          <p class="bottom-card-3__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-        </a>
-      </div>
-    </section>
-    <section class="grid-design">
-      <h3>Graphics Design</h3>
-      <div class="img-grid">
-
-        <div class="top-image">
-          <img class="top-image" src="image/unsplash_rqIfy1UyIzE.jpg" alt="">
         </div>
+        <img
+          class="statistic__image"
+          src="image/Group 3.png"
+          alt=""
+        />
+      </section> 
 
-        <div class="bot-image-1">
-          <img class="bot-image-1" src="image/Rectangle 6.jpg" alt="">
+      <section class="feed">
+        <div class="feed__grid-container">
+          <a class="feed__top-card" href="">
+            <div class="feed__image"></div>
+            <span class="feed__heading">Project: Banking Mobile App</span>
+            <span class="feed-label"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.</span
+            >
+          </a>
+
+          <a class="feed__bottom-card-1" href="">
+            <div class="feed__image"></div>
+            <span class="feed__heading">Banking Mobile App</span>
+            <p class="feed__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+          </a>
+
+          <a class="feed__bottom-card-2" href="">
+            <div class="feed__image"></div>
+            <span class="feed__heading">Save Planet Mobile app</span>
+            <p class="feed__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+          </a>
+
+          <a href="" class="feed__bottom-card-3">
+            <div class="feed__image"></div>
+            <span class="feed__heading">Banking Mobile App</span>
+            <p class="feed__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna.
+            </p>
+          </a>
         </div>
+      </section> 
 
-        <div class="bot-image-2">
-          <img class="bot-image-2" src="image/Rectangle 7.jpg" alt="">
+      <section class="design">
+        <h3 class="design__label">Graphics Design</h3>
+        <div class="design-grid">
+          <div class="design__first-item">
+            <img
+              class="design__first-image"
+              src="image/unsplash_rqIfy1UyIzE.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="design__second-item">
+            <img class="design__second-image" src="image/Rectangle 6.jpg" alt="" />
+          </div> 
+
+          <div class="design__third-item">
+            <img class="design__third-image" src="image/Rectangle 7.jpg" alt="" />
+          </div>
         </div>
+      </section> 
 
-        
-
-        
-
-
-
-      </div>
-    </section>
        <section class="phrase-section">
-      <h4>“Good design is like a refrigerator - when it works, no one notices, but when it doesn't, it sure stinks.”</h4>
-    </section>
-  </main> 
+        <h4 class="phrase__label">
+          “Good design is like a refrigerator - when it works, no one notices,
+          but when it doesn't, it sure stinks.”
+        </h4>
+      </section> 
+    </main>
 
-   <footer>
+     <footer>
       <a class="footer__button" href="">
-        <img class="button__sun" src="image/Dawn.png" alt="">
-        <div class="button__label">
-          <span class="label__heading">Have a new project?</span>
-          <div class="button__label__span-vector">
-            <span class="span-vector__book">Book a call now</span>
-            <img class="footer__img" src="image/Group 2.png" alt="">
-          </div>
+        <img class="footer__sun" src="image/Dawn.png" alt="" />
+          <article class="footer__text">
+          <span class="footer__heading">Have a new project?</span>
+          <div class="footer__paragraph">
+            <p class="footer__book">Book a call now</p>
+            <img class="footer__vector" src="image/Group 2.png" alt="" />      
+         </article>
         </div>
       </a>
 
-      <div class="footer__social-media">
-        <div class="social-media__massengers-logos">
-          <a href="" class="massengers-logos__images-logo"><img src="image/twitch 1.png" alt=""></a>
-          <a href="" class="massengers-logos__images-logo"><img src="image/twitter 1.png" alt=""></a>
-          <a href="" class="massengers-logos__images-logo"><img src="image/instagram 1.png" alt=""></a>
-          <a href="" class="massengers-logos__images-logo"><img src="image/linkedin 1.png" alt=""></a>
+
+      <div class="footer__contact-wrapper">
+        <div class="footer__massengers-logos">
+          <a href="" class="footer__image-logo"
+            ><img src="image/twitch 1.png" alt=""
+          /></a>
+          <a href="" class="footer__image-logo"
+            ><img src="image/twitter 1.png" alt=""
+          /></a>
+          <a href="" class="footer__image-logo"
+            ><img src="image/instagram 1.png" alt=""
+          /></a>
+          <a href="" class="footer__image-logo"
+            ><img src="image/linkedin 1.png" alt=""
+          /></a>
         </div>
-        <span class="social-media__copyright">Copyright © 2023 Syeda Urooj</span>
+        <span class="footer__copyright"
+          >Copyright © 2023 Syeda Urooj</span
+        >
       </div>
-  </footer>  
-</body>
+    </footer> 
+  </body>
 </html>
