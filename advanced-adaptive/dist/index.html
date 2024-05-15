@@ -17,46 +17,49 @@
 
           <a class="navbar__link" href="">
             <li class="navabar__item">
-             
+          
                 <img
                   class="navbar__image"
                   src="image/fi-rr-magic-wand.png"
                   alt=""
                 />
-              <span class="button__label">Portfolio</span>
+                Portfolio
             </li>
           </a>
 
         <a class="navbar__link" href="">
           <li class="navabar__item">
+           
               <img
-                class="button__image"
+                class="navbar__image"
                 src="image/fi-rr-document.png"
                 alt=""
               />
-            <span class="button__label">Resume</span>
+              Resume
           </li>
         </a>
 
         <a class="navbar__link" href="">
           <li class="navabar__item">
+        
               <img
-                class="button__image"
+                class="navbar__image"
                 src="image/fi-rr-flower-tulip.png"
                 alt=""
               />
-            <span class="button__label">Testimonials</span>
+              Testimonials
           </li>
         </a>
 
         <a class="navbar__link" href="">
           <li class="navabar__item">
+            
               <img
-                class="button__image"
+                class="navbar__image"
                 src="image/fi-rr-comment-heart.png"
                 alt=""
               />
-            <span class="button__label">Contact</span>
+              Contact
           </li>
         </a>
 
@@ -208,5 +211,16 @@
         >
       </div>
     </footer> 
+    <script>
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        console.log(header)
+        if (window.scrollY > 50) { // Можете изменить значение 50 на любое другое
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+      </script>
   </body>
 </html>
