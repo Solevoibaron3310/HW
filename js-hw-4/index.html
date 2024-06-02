@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+
+       
+       
+    
+
+        function getValidNumber(message) {
+    let num = prompt(message);
+    if (isNaN(num) || num === null || num.trim() === '') {
+        return prompt(getValidNumber('Введіть коректне число:'));
+    }
+    return parseFloat(num);
+}
+
+
+let num1 = prompt(getValidNumber('Введіть перше число:'));
+
+
+let num2 = prompt(getValidNumber('Введіть друге число:'));
+
+
+const min = Math.min(num1);
+const max = Math.max(num2);
+
+
+console.log(`Числа від ${min} до ${max}:`);
+for (let i = min; i <= max; i++) {
+    console.log(i);
+}
+
+
+
+let num = prompt("Enter your number")
+
+if ( isNaN(num)) {
+    alert("you entered wrong data")
+} else if (num % 2 === 0) {
+    console.log('You entered suitable value')
+} else {
+    alert('You entered wrong number')
+}
+
+
+
+
+    
+
+
+    </script>
+</body>
+</html>
