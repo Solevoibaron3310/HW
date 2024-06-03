@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) Логічний оператор — це оператор, який використовується для виконання логічних операцій в програмуванні.
+        // 2) AND (&&)
+            // OR (||)
+            // NOT (!)
+
+
+        let age = prompt('Please enter your age')
+
+        if (isNaN(age)) {
+            alert('You entered wrong data')
+        } else if (age >= 18) {
+            alert('You are welcome')
+        } else {
+            alert(`You are a kid you are only ${age}`)
+        }
+
+
+
+            let month = prompt('Please enter your month')
+
+            let lovermonth = month.toLowerCase()
+
+            switch (lovermonth) {
+                case "вересень" :
+                console.log(30)
+                break;
+                case "жовтень" :
+                console.log(31)
+                break;
+                case "листопад" :
+                console.log(30)
+                break;
+                case "грудень" :
+                console.log(31)
+                break;
+                case "січень" :
+                console.log(31)
+                break;
+                case "лютий" :
+                console.log(28)
+                break;
+                case "березень" :
+                console.log(31)
+                break;
+                case "квітень" :
+                console.log(30)
+                break;
+                case "травень" :
+                console.log(31)
+                break;
+                case "червень" :
+                console.log(30)
+                break;
+                case "липень" :
+                console.log(31)
+                break;
+                case "серпень" :
+                console.log(31)
+                break;
+                default:
+                    console.log('Ви неправильно ввели інформацію')
+                break;
+            }
+    </script>
+</body>
+</html>
