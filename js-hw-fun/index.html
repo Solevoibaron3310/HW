@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1) 1. function name(argument) {
+
+        }
+            2. let name of variable = function(name) {
+
+            }
+            3. let name of variable = (name) => {
+
+            }
+
+        2) return це оператор який повертає те що в нього передали користувачу або з функції. Тому що якщо спробувати в консоль результат функції то він поверне undefinded.
+        Використовуємо пишучи return та те що ми хочемо отримати від функції.
+
+        3) Параметри — це змінні, які оголошуються у визначенні функції та які функція очікує отримати під час виклику. Вони виступають як місцеві змінні всередині функції.
+            Аргументи — це фактичні значення, які передаються функції під час її виклику. Ці значення використовуються для ініціалізації параметрів функції.
+
+        4) Використання функцій зворотного виклику (callback functions)
+        */
+
+        function division(a, b) {
+            a = 10
+            b =2
+            return console.log(a / b) 
+        }
+
+        division()
+        
+
+            let a = prompt("Enter your number")
+            let operationSign = prompt('Please enter which operation you want to do')
+            let b = prompt("Enter your number")
+
+
+            a = Number(a);
+            b = Number(b);
+
+            function mathOperations() {
+
+
+                if (isNaN(a) || isNaN(b)) {
+                    alert('You entered wrong data')
+                    return
+                } else if (b === 0) {
+                    alert('Its imposible to divide on 0')
+                    return
+                } 
+                
+                if (operationSign !== '/' && operationSign !== '+' && operationSign !== '-' && operationSign !== '*') {
+                    return alert("Такої операції не існує")
+                }  else {
+                    switch (operationSign) {
+                        case '+' :
+                            return console.log(a + b)
+                            break;
+                        case '-' :
+                            returnconsole.log(a - b)
+                            break;
+                        case '*' :
+                            return console.log(a * b)
+                            break;
+                        case '/' :
+                            return console.log(a / b)
+                            break;
+                        }
+                }
+                
+            }
+
+            mathOperations()
+
+
+            let a = prompt("Enter your number")
+                a = Number(a)
+
+
+            function factorial() {
+                if (isNaN(a)) {
+                    alert('You entered wrong data!')
+                } else {
+                    return console.log(a**a)
+                }
+            }
+
+            factorial()
+
+    </script>
+</body>
+</html>
