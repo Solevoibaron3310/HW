@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <!-- 
+                1) DOM це набір властивостей які ми використовуємо для того щоб прийняти щось з html в js зміти при бажанні та вивсести в консоль;
+                2)innerHTML обробляє всі HTML-теги всередині елемента, тоді як innerText ігнорує HTML і повертає лише текстовий вміст без тегів.
+                3)За допомогою методів: 
+                getElementById
+                getElementsByClassName або querySelectorAll
+                getElementsByTagName або querySelector
+
+                Для отримання конкретного елемента за його id використовуйте getElementById. Це найшвидший і найбільш ефективний спосіб.
+                
+                4) може містити будь-які типи вузлів, такі як елементи DOM, текстові вузли або коментарі.
+                    HTMLCollection обмежений лише елементами HTML.   
+                -->
+                    
+
+    <h2>ksdjnfvojsnfs</h2>
+
+    <div class="feature">
+
+    </div>
+    <div class="feature">
+
+    </div>
+    <div class="feature">
+
+    </div>
+    <div class="feature">
+
+    </div>
+
+    <script>
+
+        let div = document.getElementsByClassName('feature');
+        div.style.textalign = 'сenter'
+        //let div = document.getElementByClassgName(feature)
+
+        console.log(div)
+
+        let h2 = document.getElementsByTagName('h2');
+        h2.textContent = 'Awesome feature';
+           
+        console.log(h2)
+
+        let title = document.getElementsByClassName('.feature-title')
+        
+        title.forEach(title => {
+            title.textContent += '!';
+        })
+
+    </script>
+</body>
+</html>
