@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="button" value="Увійти"/>-->
+
+    <script>
+
+
+/**
+ * Завдання 3.
+ *
+ * Створити елемент h1 з текстом «Ласкаво просимо!».
+ *
+ * Під елементом h1 додати елемент button з текстом «Розфарбувати».
+ *
+ * При натисканні кнопки змінювати колір кожної літери елемента h1 на випадковий.
+ */
+
+/* Дано */
+
+/**
+ * Завдання 4.
+ *
+ * Поліпшити скрипт із попереднього завдання.
+ *
+ * При кожному русі курсору по сторінці
+ * Змінювати колір кожної літери елемента h1 на випадковий.
+ */
+
+ const body = document.querySelector('body')
+
+const PHRASE = 'Ласкаво просимо!';
+let h1 = document.createElement('h1');
+let btn = document.createElement('button');
+btn.textContent = 'Розфарбувати';
+h1.textContent = 'Ласкаво просимо!';
+
+btn.addEventListener('click', () => {
+    h1.textContent = '';
+    for (let i = 0; i<PHRASE.length; i++) {
+        console.log(PHRASE[i]);
+       const span = document.createElement('span');
+       span.style.color = getRandomColor();
+       span.textContent = PHRASE[i];
+     h1.append(span)  
+    }
+})
+
+body.addEventListener('mouseover', () => {
+    for (let i = 0; i<PHRASE.length; i++) {
+        console.log(PHRASE[i]);
+        span.style.color = getRandomColor();
+       span.textContent = PHRASE[i];
+     h1.append(span)  
+    }
+})
+
+document.body.append(h1);
+document.body.append(btn)
+
+
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
+        // let btn = document.querySelector('input')
+        // btn.addEventListener('click', () => { 
+           
+        //      alert("You are welcome!")
+        // })
+
+        // btn.addEventListener('mouseover', () => {
+        //     alert('You are on the button')
+        // }, { once: 'true'}) 
+
+
+
+
+
+
+
+
+
+       // 1. Створіть масив з рядків "travel", "hello", "eat", "ski", "lift" та обчисліть кількість рядків з довжиною більше за 3 символи. Вивести це число в консоль.
+
+
+        // let arr = ['travel', 'hello', 'eat', 'ski', 'lift'];
+
+        // const strCount = arr.filter(arr => arr.length > 3).length;
+
+
+        //     console.log(strCount)
+
+
+        //let array = ['travel', 'hello', 'eat', 'ski', 'lift']
+
+
+
+            // 2. Створіть масив із 4 об'єктів, які містять інформацію про людей: {name: "Іван", age: 25, sex: "чоловіча"}. Наповніть різними даними. 
+            //Відфільтруйте його, щоб отримати тільки об'єкти зі sex "чоловіча".
+
+            //Відфільтрований масив виведіть в консоль.
+
+
+
+        // let users = [
+        // user = {name: "Марія", age: 25, sex: "жіноча"},
+        // user = {name: 'Яна', age: 30, sex: 'жіноча'},
+        // user = {name:'Валерій', age: 20, sex:'чоловіча'},
+        // user = {name:'Петро', age: 30, sex: 'чоловіча'}
+        // ]
+
+        // const women = users.filter(users => users.sex === 'жіноча')
+
+        // console.log(women)
+
+
+
+     ///   let arr = []
+
+        // function filterBy(arr, ) {
+
+        // }
+
+        //filterBy()
+
+
+
+
+
+    </script>
+</body>
+</html>
