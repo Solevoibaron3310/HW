@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- 
+    1) document.createElement();
+        innerHTML
+        insertAdjacentHTML()
+    2) let navigationElement = document.querySelector('.navigation');
+        if (navigationElement) {
+    // Видалення елемента
+    navigationElement.remove();
+}
+    3) insertAdjacentElement()
+        insertAdjacentHTML()
+        insertAdjacentText()
+        parentNode.insertBefore()
+    -->
+
+    <footer>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+<main>
+    <section class="fetaures">
+
+    </section>
+</main>
+
+
+
+    <script>
+        let body = document.querySelector('body')
+        let footer = document.querySelector('footer')
+        let link = document.createElement('a');
+        link.href = '#';
+        link.textContent = 'Learn More';
+        footer.append(link)
+
+
+
+
+        let selector = document.createElement('select')
+        selector.id = 'rating';
+        let main = document.querySelector('main')
+        main.append(selector)
+
+        let option1 = document.createElement('option');
+            option1.value = 4;
+            option1.textContent = '4Stars';
+
+        let option2 = document.createElement('option');
+            option2.value = 3;
+            option2.textContent = '3Stars';
+
+        let option3 = document.createElement('option');
+            option3.value = 2;
+            option3.textContent = '2Stars';
+
+        let option4 = document.createElement('option');
+            option4.value = 1;
+            option4.textContent = '1Stars';
+
+                selector.append(option1);
+                selector.append(option2);
+                selector.append(option3);
+                selector.append(option4);
+
+    </script>
+</body>
+</html>
