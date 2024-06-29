@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    footer {
+        background-color: black;
+        width: 300px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <button id="btn-click">Click Me</button>
+
+    <section id="content">
+
+     </section>
+
+
+
+     <section>
+        <form action="">
+
+
+
+            <footer>
+
+            </footer>
+        </form>
+    </section> 
+    <script>
+        //FIRST TASK
+        let body = document.querySelector('body');
+        let button = document.getElementById('btn-click')
+        let section = document.getElementById('content')
+
+            window.addEventListener('mousedown', () => {
+            let paragraph = document.createElement('p');
+            paragraph.textContent = 'New Paragraph';
+            section.append(paragraph);
+            
+        })
+
+        body.append(section)
+
+        /// SECOND TASK
+
+        let form = document.querySelector('form');
+        let button2 = document.createElement('button');    
+        button2.id = 'btn-input-create';
+        button2.textContent = 'Create new Input!';
+        
+        form.prepend(button2);
+
+        button2.addEventListener('click', (event) => {
+            event.preventDefault();
+            let newInput = document.createElement('input');
+            newInput.placeholder = 'Enter some text';
+            newInput.type = 'email';
+            newInput.name = 'text';
+            console.log('im gay')
+            form.prepend(newInput);
+        })
+
+        body.append(form);
+    </script>
+</body>
+</html>
