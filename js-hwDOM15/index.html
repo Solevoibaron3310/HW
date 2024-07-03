@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Homework-buttons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="btn-wrapper">
+        <button class="btn">Enter</button>
+            <button class="btn">S</button>
+            <button class="btn">E</button>
+            <button class="btn">O</button>
+            <button class="btn">N</button>
+            <button class="btn">L</button>
+            <button class="btn">Z</button>
+        <button class="btn">Tab</button>
+	</div>
+    <script>
+
+
+// 1) cosnole.log(event) Виведе повну інформацію про натиснуту клавішу
+// 2) event.code ідентифікує клавішу без залежності від символів, які вона вводить event.key() повертає саме той символ, який введе ця клавіша залежачий від мови та розкладки
+// 3) -keyup: Ця подія виникає коли клавішу відтиснуто. 
+//    -keydown: Ця подія виникає коли клавішу натиснуто.
+//    -keypress: Ця подія виникає коли клавішу натиснуто й вона генерує символьний ввід.
+
+let body = document.querySelector('body');
+let buttons = document.querySelectorAll('.btn');
+
+        window.addEventListener('keydown', (e) => {
+        
+            e.preventDefault();
+            console.log(e)
+
+            buttons.forEach(button => {
+
+                if (e.code === 'Enter' && button.textContent.toLowerCase() === 'enter') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyS' && button.textContent.toLowerCase() === 's') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyE' && button.textContent.toLowerCase() === 'e') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyO' && button.textContent.toLowerCase() === 'o') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyN' && button.textContent.toLowerCase() === 'n') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyL' && button.textContent.toLowerCase() === 'l') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'KeyZ' && button.textContent.toLowerCase() === 'z') {
+                    button.style.backgroundColor = 'blue';
+                } else if (e.code === 'Tab' && button.textContent.toLowerCase() === 'tab') {
+                    button.style.backgroundColor = 'blue';
+                } else {
+                    button.style.backgroundColor = 'black';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
