@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1) ВІДМІННОСТІ :
+        -Одноразове виконання setTimeout АЛЕ Повторюване виконання: setInterval
+        -Синтаксис
+        -setTimeout: Зупинка не потрібна але setInterval: Для зупинки використовується clearInterval
+        2) Функції, передані в setTimeout та setInterval не можуть точно виконувати функцію через вказаний час.
+        3)  setInterval: clearInterval
+            settiemout: clearTimeout
+    
+    -->
+    <button class="btn">CLICK ME</button>
+    <div>YOU HAVENT CLICKED THE BUTTON</div>
+    <div>10</div>
+    <script>
+        let body = document.querySelector('body');
+        let btn = document.querySelector('.btn');
+        let div = document.querySelector('div');
+
+        let countback = 10;
+        
+         console.log('You started clock')
+        function timer() {
+            div.textContent = countback;
+
+            countback--
+
+            if (countback < 0) {
+                clearInterval(intervalId);
+                div.textContent = 'You ended count';
+            } 
+        }
+
+        let intervalId = setInterval(timer, 1000);
+
+
+
+        function btnHandler() {
+            alert('You clicked the button');
+
+            setTimeout(() => {
+                div.textContent = 'You clicked the button three seconds ago';
+            }, 3000);
+
+        }
+
+        div.addEventListener('onclick', btnHandler())
+    </script>
+
+</body>
+</html>
