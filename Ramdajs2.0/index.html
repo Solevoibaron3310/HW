@@ -94,6 +94,44 @@
         </div>
 
         <span class="reserved">All right reserved</span>
+
+        
     </footer>
+    <button class="swithcer">Change theme</button>
+    <script>
+        let body = document.querySelector('body');
+        let themeSwitcher = document.querySelector('.swithcer');
+        let navbarItems = document.querySelectorAll('.list-1');
+        let h1 = document.querySelector('h1');
+        let h3 = document.querySelector('h3');
+        let h4 = document.querySelector('h4');
+        let cost25 = document.querySelector('.cost25');
+        let lists = document.querySelector('.lft-rght-lists');
+        let btncontact = document.querySelector('.Contact');
+        let plan = document.querySelector('.plan2');
+        let allReserved = document.querySelector('reserved');
+
+        const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                body.classList.add(currentTheme);
+            } else {
+                body.classList.add('light-theme');
+            }
+        
+        themeSwitcher.addEventListener('click', () => {
+          if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+            localStorage.setItem('theme', 'light-theme');
+          }   else if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark-theme');
+          } else {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark-theme');
+          }
+        })
+    </script>
 </body>
 </html>

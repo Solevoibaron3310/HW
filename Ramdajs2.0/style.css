@@ -1,5 +1,65 @@
-body {
+body.light-theme {
     width: 1400px;
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme {
+    width: 1400px;
+    background-color: #0E0F13;
+    color: white;
+}
+body.dark-theme a.list-1 {
+    color: white;
+}
+
+body.light-theme a.list-1 {
+    color: black;
+}
+
+body.dark-theme h1 {
+    color: white;
+}
+
+body.dark-theme h2 {
+    color: white;
+}
+
+body.dark-theme .cost25 {
+    color: white;
+}
+
+body.light-theme h1 {
+    color: black;
+}
+
+body.light-theme h4 {
+    color: black;
+}
+
+body.light-theme h2 {
+    color: black;
+}
+
+body.dark-theme h4 {
+    color: white;
+}
+
+body.dark-theme .lft-rght-lists {
+    color: white;
+}
+
+body.dark-theme .Contact {
+    background-color: green;
+    border: none;
+}
+
+body.dark-theme .plan2 {
+    color: white;
+}
+
+body.dark-theme .reserved {
+    color: white;
 }
 
 header {
@@ -51,6 +111,7 @@ ul {
     text-decoration: none;
     color: black;
 }
+
 
 .list-1-spec {
     font-family: Cabin;
