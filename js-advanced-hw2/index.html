@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+    //1) Це спосіб передавати якіс властивості об'єктів та робити їх дочірніми.
+    //2) Щоб за допомогою this можна було дістатися якихось змінних та методів та змінювати їх у дочірньому об'єкті.
+
+
+class Employee {
+    constructor(name, age, salary) {
+        this._name = name;
+        this._age = age;
+        this._salary = salary;
+    }  
+
+    get name() {
+        return this._name;
+    }
+
+    set name(value) {
+        this._name = value;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    set age(value) {
+        this._age = value;
+    }
+
+    get salary () {
+        return this._salary;
+    }
+
+    set salary (value) {
+        this._salary = value;
+    }
+}
+
+class Programmer extends Employee {
+    constructor(name, age, salary, lang) {
+        super(name, age, salary);
+        this._lang = lang;
+    }
+
+    get lang() {
+        return this._lang;
+    }
+
+    set lang(value) {
+        this._lang = value;
+    }
+
+    get salary() {
+        return this._salary * 3;
+    }
+} 
+    
+
+ const Programmer1 = new Programmer('iliya', 20, 3000, 'english' );
+
+ const Programmer2 = new Programmer('ivan', 18, 2000, 'spanish' );
+ 
+ const Programmer3 = new Programmer('anatoliy', 35, 10000, 'english, and italian' );
+
+    console.log(Programmer1);
+    console.log(Programmer2);
+    console.log(Programmer3);
+    
+    </script>
+</body>
+</html>
