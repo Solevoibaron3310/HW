@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            width: 1000px;
+            height: 700px;
+            background-color: green;
+            border: 1px, solid, black;
+            
+        }
+    </style>
+</head>
+<body>
+
+<div id="root" class="root">
+
+</div>
+    <script>
+        let body = document.querySelector('body');
+        const books = [
+  { 
+    author: " ",
+    name: "Список запрошених",
+    price: 70 ,
+  }, 
+  {
+   author: "Сюзанна Кларк",
+   name: "Джонатан Стрейндж і м-р Норрелл",
+  }, 
+  { 
+    name: "Дизайн. Книга для недизайнерів.",
+    price: 70
+  }, 
+  { 
+    author: "Алан Мур",
+    name: "Неономікон",
+    price: 70
+  }, 
+  {
+   author: "Террі Пратчетт",
+   name: "Рухомі картинки",
+   price: 40
+  },
+  {
+   author: "Анґус Гайленд",
+   name: "Коти в мистецтві",
+  }
+];
+
+
+        function createList(book) {
+            let div = document.createElement('div');
+
+            let divAuthor = document.createElement('p');
+            divAuthor.textContent = book.author
+            div.appendChild(divAuthor);
+
+            let divName = document.createElement('p');
+            divName.textContent = book.name;
+            div.appendChild(divName);
+
+            let divPrice = document.createElement('p');
+            divPrice.textContent = book.price;
+            div.appendChild(divPrice);
+                return div;
+        }
+        
+
+
+        let divContainer = document.querySelector('.root');
+
+        books.forEach((book) => {
+            const CardsList = document.createElement('li');
+            const newLi = createList(book);
+            CardsList.appendChild(newLi);
+
+
+            try {
+                
+                if (book.name === undefined || book.author === undefined || book.price === undefined) {
+                            throw new Error('Value is undefined')
+                    }  if (book.name.trim() === '' || book.author.trim() === '') {
+
+                      
+                        book.name = undefined;
+                        book.author = undefined;
+                        // console.log(book.name)
+                        throw new Error('Value is undefined')
+                     }   else if (book.hasOwnProperty('author') && book.hasOwnProperty('price') && book.hasOwnProperty('name')) {
+                                        divContainer.appendChild(CardsList);
+                                        } 
+        
+
+            } catch (undefined) {
+                if (true) {
+                    console.log(book)
+                } else {
+                    console.log(book)
+                }
+            }       
+        });
+
+        body.appendChild(divContainer); 
+    </script>
+</body>
+</html>
