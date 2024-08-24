@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        display: grid;
+
+    }
+
+    .Films-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        border: black, 2px, solid;
+        grid-gap: 20px;
+}
+</style>
+<body>
+
+    <div class="content">
+        <div id="films" class="Films-container">
+
+        </div>
+        <div id="POST-films" class="">
+
+        </div>
+    </div>
+    
+    <script>
+const API = 'https://ajax.test-danit.com/api/swapi/films';
+
+async function sendRequest(url,method="GET",options) {
+    const response = await fetch(url,{
+        method: method,
+        ...options,
+    })
+    const result = response.json()
+    return result
+}
+
+
+let containerFilms = document.querySelector('#films');
+let containerPosts = document.querySelector('#POST-films')
+
+
+class Film {
+    constructor(episodeId, name, openingCrawl, characters, container) {
+        this.episodeId = episodeId;
+        this.name = name;
+        this.openingCrawl = openingCrawl;
+        this.characters = characters;
+        this.container = container;
+    }
+
+    render() {
+        this.container.insertAdjacentHTML('beforeend', `
+            
+            <div class="Films-container">
+        <div class="film-item">
+            <label class="film-label">${this.name} </label>
+            <p class="film-episodId">${this.episodeId}</p>
+            <p class="film-openingCrawl">${this.openingCrawl}</p>
+            <p class="characters">${this.characters}</p>
+
+        </div>
+    </div>
+        
+        `)
+    }
+}
+
+
+class Post {
+    constructor (title, body, container) {
+        this.title = title;
+        this.body = body;
+        this.container = container;
+    }
+
+    render () {
+        this.container.insertAdjacentHTML('beforeend', `
+                 <div class="post-item">
+         <p class="item-title">${ this.title }</p>
+         <p>${ this.body }</p>
+     </div>
+            `)
+    }
+}
+
+
+function renderFlims() {
+    sendRequest(API)
+    .then((data) => {
+        data.forEach(film => {
+                const filmCard = new Film(film.episodeId, film.name, film.characters, film.openingCrawl, containerFilms)
+                filmCard.render()
+        });
+    })
+}
+
+
+
+renderFlims()
+
+
+
+    </script>
+</body>
+</html>
