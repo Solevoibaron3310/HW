@@ -1,0 +1,263 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        display: grid;
+
+    }
+
+    .Films-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        border: black, 2px, solid;
+        grid-gap: 20px;
+}
+</style>
+<body>
+
+    <div class="content">
+        <div class="post-wrapper">
+
+        
+        <div id="users" class="useers-container">
+
+
+
+        </div>
+        <div id="POSTS" class="">
+
+        </div>
+    </div>
+    </div>
+    
+    <script>
+const API = 'https://ajax.test-danit.com/api/json/';
+
+async function sendRequest(url,method="GET",options) {
+    const response = await fetch(url,{
+        method: method,
+        ...options,
+    })
+    const result = response.json()
+    return result
+}
+
+sendRequest(`${API}users`)
+    .then(users => {
+        console.log(users); 
+    })
+    .catch(error => {
+        console.error('Помилка при отриманні даних:', error);
+    });
+
+    sendRequest(`${API}posts`)
+    .then(users => {
+        console.log(users); 
+    })
+    .catch(error => {
+        console.error('Помилка при отриманні даних:', error);
+    });
+
+let containerUsers = document.querySelector('#users');
+let containerPosts = document.querySelector('#POSTS')
+
+
+
+
+
+
+
+class User  {
+    constructor(id, username, email, container) {
+        this.id = id, 
+        this.email = email,
+        this.username = username,
+        this.container = container
+    }  
+
+
+
+    render() {
+         this.container.insertAdjacentHTML('beforeend', `
+            <p class="user-name">${this.username}</p>
+            <p class="user-email">${this.email}</p>
+         `)
+    }
+}
+
+class Post  {
+    constructor(title, body, container) {
+        this.title = title,
+        this.body = body,
+        this.container = container
+    }
+    render() {
+        this.container.insertAdjacentHTML('beforeend', `
+            <p class="posts-title">${this.title}</p>
+            <p class="posts-body">${this.body}</p>
+        `)
+    }
+}
+
+function renderCards() {
+    function renderUsers() {
+    sendRequest(`${API}users`)
+    .then((users) => {
+        users.forEach(user => {
+                console.log(username)
+                const userCard = new User(user.username, user.email, containerUsers)
+                userCard.render()
+            })
+
+    })
+    }
+    renderUsers()
+
+    function renderPosts() {
+       sendRequest(`${API}posts`) 
+       .then((posts) => {
+        posts.forEach(post => {
+            const postRender = new Post(post.title, post.body, containerPosts)
+            postsRender.render()
+        })
+       })
+    }
+    renderPosts()
+}
+
+renderCards()
+
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        display: grid;
+    }
+
+    .Films-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: black, 2px, solid;
+        grid-gap: 20px;
+    }
+
+    .user {
+        margin-bottom: 20px;
+    }
+
+    .post {
+        margin-left: 20px;
+    }
+</style>
+<body>
+
+    <div class="content">
+        <div class="post-wrapper" id="users-posts-container"></div>
+    </div>
+    
+    <script>
+const API = 'https://ajax.test-danit.com/api/json/';
+
+async function sendRequest(url, method = "GET", options) {
+    const response = await fetch(url, {
+        method: method,
+        ...options,
+    });
+    const result = await response.json();
+    return result;
+}
+
+let container = document.querySelector('#users-posts-container');
+
+class User {
+    constructor(id, username, email) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.posts = [];
+    }
+
+    addPost(post) {
+        this.posts.push(post);
+    }
+
+    render(container) {
+        const userElement = document.createElement('div');
+        userElement.classList.add('user');
+        userElement.innerHTML = `
+            <h3 class="user-name">${this.username}</h3>
+            <p class="user-email">${this.email}</p>
+        `;
+        
+        this.posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+                <h4 class="posts-title">${post.title}</h4>
+                <p class="posts-body">${post.body}</p>
+            `;
+            userElement.appendChild(postElement);
+        });
+
+        container.appendChild(userElement);
+    }
+}
+
+class Post {
+    constructor(userId, title, body) {
+        this.userId = userId;
+        this.title = title;
+        this.body = body;
+    }
+}
+
+async function renderCards() {
+    try {
+        const users = await sendRequest(`${API}users`);
+        const posts = await sendRequest(`${API}posts`);
+
+        const userMap = {};
+
+        // Сначала создаем пользователей и добавляем их в userMap
+        users.forEach(user => {
+            userMap[user.id] = new User(user.id, user.name, user.email);
+        });
+
+        // Добавляем посты к соответствующим пользователям
+        posts.forEach(post => {
+            if (userMap[post.userId]) {
+                const userPost = new Post(post.userId, post.title, post.body);
+                userMap[post.userId].addPost(userPost);
+            }
+        });
+
+        // Рендерим всех пользователей и их посты
+        Object.values(userMap).forEach(user => {
+            user.render(container);
+        });
+
+    } catch (error) {
+        console.error('Помилка при отриманні даних:', error);
+    }
+}
+
+renderCards();
+
+    </script>
+</body>
+</html>
